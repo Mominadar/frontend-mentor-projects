@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 14px;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Montserrat;
+  font-size: 500;
+  color: var(--dark-grayish-blue);
+}
+
+.card {
+  background-color: var(--white);
+
+  max-width: 650px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 15px;
+}
+.card-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  grid-gap: 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  text-align: left;
+}
+
+.cart-btn {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  padding: 0.5rem;
+  font-size: large;
+}
+
+.pre-heading {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+}
+.secondary-font {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+.perfume-name {
+  font-size: 2.8rem;
+  line-height: 1;
+  color: black;
+  margin-block: 0.4em;
+}
+
+.price {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block-end: 1em;
+}
+
+.new-price {
+  color: var(--dark-cyan);
+  font-size: 2.2rem;
+}
+
+.cart-btn {
+  margin-block: 0.778em;
+  padding: 0.7rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+#product-img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  content: url("./images/image-product-desktop.jpg");
+}
+
+.cart-icon{
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* .card {
+    background-color: green;
+  } */
+  #product-img {
+    content: url("./images/image-product-mobile.jpg");
+  }
+}
+
+/* @media screen and (max-width: 400px) {
+  .card {
+    background-color: blue;
+    grid-template-columns: auto;
+  }
+}  */
