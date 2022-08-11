@@ -24,7 +24,6 @@ body {
 
 .card {
   background-color: var(--white);
-
   max-width: 650px;
   margin: auto;
   display: grid;
@@ -44,7 +43,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 1rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
   text-align: left;
 }
 
@@ -53,9 +53,12 @@ body {
   color: var(--white);
   border: none;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   padding: 0.5rem;
   font-size: large;
+  margin-block: 0.9em;
+  padding: 0.7rem;
+  align-self: center;
 }
 
 .pre-heading {
@@ -88,11 +91,6 @@ body {
   font-size: 2.2rem;
 }
 
-.cart-btn {
-  margin-block: 0.778em;
-  padding: 0.7rem;
-}
-
 .old-price {
   text-decoration: line-through;
 }
@@ -102,6 +100,7 @@ body {
   object-fit: cover;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  border-top-right-radius: 0;
   content: url("./images/image-product-desktop.jpg");
 }
 
@@ -109,18 +108,27 @@ body {
     margin-right: 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
-  /* .card {
-    background-color: green;
-  } */
+@media screen and (max-width: 700px) {
   #product-img {
     content: url("./images/image-product-mobile.jpg");
-  }
-}
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 
-/* @media screen and (max-width: 400px) {
+  }
+  .content{
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+  }
   .card {
-    background-color: blue;
+    max-width: 400px;
+    width:90%;
     grid-template-columns: auto;
   }
-}  */
+  .cart-btn{
+    margin-block: 0;
+  }
+  .perfume-name {
+    font-size: 2rem;
+  }
+}
