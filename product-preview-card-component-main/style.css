@@ -24,9 +24,18 @@ body {
   color: var(--dark-grayish-blue);
 }
 
+img {
+  max-width: 100%;
+}
+
+#root{
+  max-height:  450px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 10px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -34,22 +43,24 @@ body {
 
 .card {
   background-color: var(--white);
-  max-width: 650px;
+  max-width: 600px;
+  max-height:  450px;
   margin: auto;
-  margin-bottom: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   border-radius: 15px;
 }
 
 .content {
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-block: 1rem;
+  padding-block: 2rem;
   padding-inline: 2rem;
-  text-align: left;
+  text-align: left;  
 }
+
 
 .cart-btn {
   background-color: var(--dark-cyan);
@@ -59,8 +70,7 @@ body {
   width: 100%;
   padding: 0.5rem;
   font-size: large;
-  margin-block: 0.9em;
-  padding: 0.7rem;
+  margin-block: 0.5em;
   align-self: center;
 }
 .cart-btn:hover{
@@ -70,19 +80,20 @@ body {
 .pre-heading {
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .secondary-font {
   font-family: "Fraunces", serif;
   font-weight: 700;
+  margin-block:0;
 }
 
 .perfume-name {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   line-height: 1;
-  color: black;
-  margin-block: 0.4em;
+  color: var(--very-dark-blue);
+  padding-right: 2rem;
 }
 
 .price {
@@ -90,7 +101,6 @@ body {
   gap: 20px;
   justify-content: flex-start;
   align-items: center;
-  margin-block-end: 1em;
 }
 
 .new-price {
@@ -101,10 +111,18 @@ body {
 .old-price {
   text-decoration: line-through;
 }
+.description{
+  line-height: 1.8;
+  font-weight: 400;
+}
 
 #product-img {
   width: 100%;
   height: 100%;
+  max-height: inherit;
+  max-width: inherit;
+  overflow: hidden;
+  background-color: green;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -117,6 +135,12 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  #root{
+    max-height: fit-content;
+  }
+  .card{
+   max-height: fit-content;
+  }
   #product-img {
     content: url("./images/image-product-mobile.jpg");
     border-bottom-left-radius: 0;
@@ -144,8 +168,5 @@ body {
 @media screen and (max-width: 280px) {
   body {
     height: 98vh;
-  }
-  #product-img {
-    width: 94%;
   }
 }
