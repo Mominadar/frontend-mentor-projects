@@ -13,15 +13,14 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="root">
-      <div class="card">   
-        <img id="product-img" alt="product-img" />
-        <div class="content">
+    <div id="root" role="main">
+      <div role="contentinfo" class="card">   
+        <img id="product-img" alt="product-img" src="./images/image-product-desktop.jpg"/>
+        <section class="content">
           <h2 class="pre-heading">Perfume</h2>
           <h1 class="secondary-font perfume-name">
             Gabrielle Essence Eau De Parfum
           </h1>
-
           <p class="description">
             A floral, solar and voluptuous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
@@ -37,10 +36,10 @@
               class="cart-icon"
             />Add to Cart
           </button>
-        </div>
+        </section>
       </div>
     </div>
-    <div class="attribution">
+    <div role="footer" class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
